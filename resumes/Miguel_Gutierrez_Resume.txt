@@ -1,0 +1,41 @@
+Miguel Gutierrez
+magutierrez@smu.edu     •     www.linkedin.com/in/miggut1/    •     469-366-4397     •     Dallas, Texas
+
+EDUCATION                                                                                                                                                                         B.A. in Computer Science & B.B.A. in Finance, GPA: 3.8	Dallas, TX
+Southern Methodist University                                                                                                                            May 2028
+	– Relevant Coursework: Data Structures & Algorithms, OOP, Database Design, Operating Systems, Computer Networks, Software Engineering, Discrete Math
+   – Involvement: Society of Hispanic Professional Engineers (SHPE), Association of Latino Professionals for America
+      (ALPFA), ColorStack, Computer Security Group (CSG), HackSMU
+   – Leadership: SHPE Treasurer, managing $12K+ budget and driving transparent reporting.
+Technical Skills:                                                                                                                                                           
+Languages: Java, C/C++, Python, SQL, JavaScript/TypeScript, Swift
+Frameworks: React, Next.js, Node.js, Express, SwiftUI
+Databases & Data: PostgreSQL, Firebase (Auth/Firestore), MongoDB, MySQL, Redis
+APIs & Integrations: REST, GraphQL, Stripe, Apple Push Notifications (APNs), Google APIs, OpenAI API
+Tools & Cloud: Git/GitHub, Docker, AWS, Linux, Vercel, Prisma, tRPC, TensorFlow, Roboflow, MATLAB
+Testing: XCTest, Jest, PyTest
+Concepts: API design, state machines, idempotency, scalability, monitoring/observability, cron/retries, DB migrations
+EXPERIENCE:                                                                                                                                                                           Oath - (iOS + Web) joinoath.com	     	                                 			          November 2025 – Present
+Founder & Full-Stack Engineer                                                                                                                               Dallas, TX
+	•	Designed, coded, tested, and shipped a full-stack accountability app (iOS + web) enabling skill contests with automated verification and payouts.
+	•	Built a contract lifecycle state machine (pending/active/settled/expired) with edge-case handling; implemented idempotent, retry-safe payment workflows with Stripe (card + Apple Pay).
+	•	Modeled Postgres schema and migrations; built API endpoints and a monorepo structure shared across clients; added monitoring for crashes, latency, and payout failures.
+ Traders@SMU, Dallas, TX 							                                 Aug 2024 – Present
+Associate Quant                                                                                                                                                       Dallas, TX
+	•	Performed Quantitative Market Research using Python (pandas, NumPy, statsmodels) to analyze equities and futures data, identifying arbitrage opportunities and delivering insights to a 12-member trading team
+	•	Developed & Deployed a pairs-trading model leveraging cointegration tests and rolling-window z-score triggers, backtested over 5 years of historical data to achieve an annualized return of 6% with a Sharpe ratio above 1.5.
+CampusReach                                                                                                                                          Aug 2025 – Present
+Lead Developer                                                                                                                                                       Dallas, TX 
+	•	Architecting and building the website and mobile app MVP end-to-end, defining core features and UX flows
+	•	Launching releases, wiring up analytics and feedback, and iterating quickly from testing 
+Coding Central - https://codingcentral.org/ Non-Profit                                                                   Dec 2022 – May 2024
+Co-Founder                                                                                                                                                             Dallas, TX 
+	•	Led outreach initiatives, fostering partnerships and collaborations to support the mission
+	•	Organized and executed tech events, benefiting over 5,000 learners globally and locally
+	•	Gained extensive experience in project management, event planning, and collaboration
+PROJECTS:                                                                                                                                                                               
+HackSMU VI | Python, Roboflow, TensorFlow, Git
+	•	ParkHub Challenge - Used Python to train a model with over 4,000+ images with preprocessing and augmentation 
+Today’s Path | Swift, Firebase, Git
+	•	Created & launched iOS application using Swift + Firebase, with authentication, database, analytics, and cloud 
+	•	Developed personalized AI reflection generation, daily journaling prompts, habit streak tracking, and configurable push notifications. (Download on App Store)
