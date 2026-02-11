@@ -123,10 +123,49 @@
             transform: translateX(5px);
         }
         
+        .job-item.urgent {
+            border-left-color: #e74c3c;
+            background: #fff5f5;
+        }
+        
+        .job-item.warning {
+            border-left-color: #f39c12;
+            background: #fffbf0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
         .job-company {
             font-weight: bold;
             font-size: 1.2em;
             color: #333;
+        }
+        
+        .deadline {
+            font-size: 0.85em;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 15px;
+        }
+        
+        .deadline.urgent {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .deadline.warning {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .deadline.safe {
+            background: #27ae60;
+            color: white;
         }
         
         .job-role {
@@ -204,29 +243,6 @@
             background: #2980b9;
         }
         
-        .progress-section {
-            margin-top: 20px;
-        }
-        
-        .progress-bar {
-            background: #e9ecef;
-            border-radius: 10px;
-            height: 30px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-        
-        .progress-fill {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            transition: width 0.5s;
-        }
-        
         .nav-tabs {
             display: flex;
             gap: 10px;
@@ -261,6 +277,28 @@
         
         .tab-content.active {
             display: block;
+        }
+        
+        .sort-controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .sort-btn {
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .sort-btn.active {
+            background: #667eea;
+            color: white;
         }
         
         .company-list {
@@ -337,13 +375,36 @@
             margin-top: 20px;
             opacity: 0.8;
         }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .legend-dot.urgent { background: #e74c3c; }
+        .legend-dot.warning { background: #f39c12; }
+        .legend-dot.safe { background: #27ae60; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🎯 Job Search Command Center</h1>
-            <p class="subtitle">7mangel | Finance + CS | Dallas & Big Tech Focus</p>
+            <p class="subtitle">7mangel | SMU | Finance + CS | 3.8 GPA | Dallas & Big Tech</p>
         </header>
         
         <div class="stats-grid">
@@ -360,57 +421,203 @@
                 <div class="stat-label">Interviews</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat-pending">0</div>
+                <div class="stat-number" id="stat-pending">12</div>
                 <div class="stat-label">Pending Approval</div>
             </div>
         </div>
         
         <div class="main-grid">
             <div class="panel">
-                <h2>📋 Jobs Pending Your Approval</h2>
-                <div id="pending-jobs">
-                    <div class="job-item">
-                        <div class="job-company">Google</div>
+                <h2>📋 Opportunities (Sorted by Deadline)</h2>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-dot urgent"></div>
+                        <span>Less than 2 weeks</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot warning"></div>
+                        <span>2-4 weeks</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot safe"></div>
+                        <span>More than 4 weeks</span>
+                    </div>
+                </div>
+                
+                <div class="sort-controls">
+                    <span>Sort by:</span>
+                    <button class="sort-btn active" onclick="sortBy('deadline')">⏰ Deadline</button>
+                    <button class="sort-btn" onclick="sortBy('company')">🏢 Company</button>
+                    <button class="sort-btn" onclick="sortBy('type')">📁 Type</button>
+                </div>
+                
+                <div id="opportunities-list">
+                    
+                    <!-- URGENT - Less than 2 weeks -->
+                    <div class="job-item urgent" data-deadline="2026-02-15" data-company="Dell Scholars" data-type="scholarship">
+                        <div class="job-header">
+                            <div class="job-company">Dell Scholars Program</div>
+                            <div class="deadline urgent">🔥 Due: Feb 15, 2026</div>
+                        </div>
+                        <div class="job-role">$20,000 + Laptop + Support</div>
+                        <div class="job-tags">
+                            <span class="tag">💰 $20K</span>
+                            <span class="tag">🎓 Scholarship</span>
+                            <span class="tag sophomore">Pell Eligible</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="applyNow('https://www.dellscholars.org/apply')">🚀 APPLY NOW</button>
+                            <button class="btn btn-info" onclick="moreInfo('Dell', 'Scholars')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
+                    <!-- WARNING - 2-4 weeks -->
+                    <div class="job-item warning" data-deadline="2026-03-01" data-company="SHPE" data-type="scholarship">
+                        <div class="job-header">
+                            <div class="job-company">SHPE Foundation Scholarships</div>
+                            <div class="deadline warning">⚠️ Due: Mar 1, 2026</div>
+                        </div>
+                        <div class="job-role">$1,000 - $5,000 | Multiple Awards</div>
+                        <div class="job-tags">
+                            <span class="tag">💰 $1-5K</span>
+                            <span class="tag">🎓 Scholarship</span>
+                            <span class="tag diversity">Member ✓</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="applyNow('https://www.shpe.org/career/scholarships')">🚀 APPLY NOW</button>
+                            <button class="btn btn-info" onclick="moreInfo('SHPE', 'Scholarships')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item warning" data-deadline="2026-03-15" data-company="Goldman Sachs" data-type="internship">
+                        <div class="job-header">
+                            <div class="job-company">Goldman Sachs</div>
+                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
+                        </div>
+                        <div class="job-role">Summer Analyst - Technology/Quant</div>
+                        <div class="job-tags">
+                            <span class="tag">💼 Internship</span>
+                            <span class="tag">💵 Paid</span>
+                            <span class="tag sophomore">Quant ✓</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="approveJob('Goldman Sachs', 'Tech/Quant')">✓ APPROVE</button>
+                            <button class="btn btn-skip" onclick="skipJob('Goldman Sachs', 'Tech/Quant')">✕ SKIP</button>
+                            <button class="btn btn-info" onclick="moreInfo('Goldman', 'Summer Analyst')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
+                    <!-- SAFE - More than 4 weeks -->
+                    <div class="job-item safe" data-deadline="2026-04-01" data-company="JPMorgan" data-type="internship">
+                        <div class="job-header">
+                            <div class="job-company">JPMorgan Chase</div>
+                            <div class="deadline safe">📅 Due: Apr 1, 2026</div>
+                        </div>
+                        <div class="job-role">Early Insights Program - Plano, TX</div>
+                        <div class="job-tags">
+                            <span class="tag">💼 Internship</span>
+                            <span class="tag sophomore">Sophomore</span>
+                            <span class="tag dallas">📍 Plano</span>
+                            <span class="tag diversity">Diversity</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="approveJob('JPMorgan', 'Early Insights')">✓ APPROVE</button>
+                            <button class="btn btn-skip" onclick="skipJob('JPMorgan', 'Early Insights')">✕ SKIP</button>
+                            <button class="btn btn-info" onclick="moreInfo('JPMorgan', 'Early Insights')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item safe" data-deadline="2026-04-15" data-company="Capital One" data-type="internship">
+                        <div class="job-header">
+                            <div class="job-company">Capital One</div>
+                            <div class="deadline safe">📅 Due: Apr 15, 2026</div>
+                        </div>
+                        <div class="job-role">Developing Leaders (DDL) - Plano, TX</div>
+                        <div class="job-tags">
+                            <span class="tag">💼 Internship</span>
+                            <span class="tag sophomore">Sophomore</span>
+                            <span class="tag dallas">📍 Plano</span>
+                            <span class="tag diversity">Diversity</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="approveJob('Capital One', 'DDL')">✓ APPROVE</button>
+                            <button class="btn btn-skip" onclick="skipJob('Capital One', 'DDL')">✕ SKIP</button>
+                            <button class="btn btn-info" onclick="moreInfo('Capital One', 'DDL')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
+                    <div class="job-item safe" data-deadline="2026-05-01" data-company="Google" data-type="internship">
+                        <div class="job-header">
+                            <div class="job-company">Google</div>
+                            <div class="deadline safe">📅 Due: May 1, 2026</div>
+                        </div>
                         <div class="job-role">STEP Internship - Software Engineering</div>
                         <div class="job-tags">
+                            <span class="tag">💼 Internship</span>
                             <span class="tag sophomore">Sophomore</span>
                             <span class="tag diversity">Diversity</span>
                         </div>
                         <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Google', 'STEP')">✓ APPLY</button>
-                            <button class="btn btn-info" onclick="moreInfo('Google', 'STEP')">ℹ INFO</button>
+                            <button class="btn btn-apply" onclick="approveJob('Google', 'STEP')">✓ APPROVE</button>
                             <button class="btn btn-skip" onclick="skipJob('Google', 'STEP')">✕ SKIP</button>
+                            <button class="btn btn-info" onclick="moreInfo('Google', 'STEP')">ℹ INFO</button>
                         </div>
                     </div>
                     
-                    <div class="job-item">
-                        <div class="job-company">JPMorgan Chase</div>
-                        <div class="job-role">Early Insights Program - Sophomores</div>
+                    <div class="job-item safe" data-deadline="2026-09-01" data-company="Microsoft" data-type="internship">
+                        <div class="job-header">
+                            <div class="job-company">Microsoft</div>
+                            <div class="deadline safe">📅 Due: Sep 1, 2026</div>
+                        </div>
+                        <div class="job-role">Explore Program - SWE/PM Track</div>
                         <div class="job-tags">
+                            <span class="tag">💼 Internship</span>
                             <span class="tag sophomore">Sophomore</span>
-                            <span class="tag dallas">Plano, TX</span>
-                            <span class="tag diversity">First-Gen Focus</span>
+                            <span class="tag diversity">Diversity</span>
                         </div>
                         <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('JPMorgan', 'Early Insights')">✓ APPLY</button>
-                            <button class="btn btn-info" onclick="moreInfo('JPMorgan', 'Early Insights')">ℹ INFO</button>
-                            <button class="btn btn-skip" onclick="skipJob('JPMorgan', 'Early Insights')">✕ SKIP</button>
+                            <button class="btn btn-apply" onclick="approveJob('Microsoft', 'Explore')">✓ APPROVE</button>
+                            <button class="btn btn-skip" onclick="skipJob('Microsoft', 'Explore')">✕ SKIP</button>
+                            <button class="btn btn-info" onclick="moreInfo('Microsoft', 'Explore')">ℹ INFO</button>
                         </div>
                     </div>
                     
-                    <div class="job-item">
-                        <div class="job-company">Charles Schwab</div>
-                        <div class="job-role">Intern Academy - Finance & Tech</div>
+                    <!-- More Scholarships -->
+                    <div class="job-item safe" data-deadline="2026-12-01" data-company="HSF" data-type="scholarship">
+                        <div class="job-header">
+                            <div class="job-company">Hispanic Scholarship Fund</div>
+                            <div class="deadline safe">📅 Due: Dec 1, 2026</div>
+                        </div>
+                        <div class="job-role">$500 - $5,000 | Multiple Awards</div>
                         <div class="job-tags">
-                            <span class="tag dallas">Westlake, TX</span>
-                            <span class="tag diversity">Hispanic Network</span>
+                            <span class="tag">💰 $500-5K</span>
+                            <span class="tag">🎓 Scholarship</span>
+                            <span class="tag diversity">Hispanic ✓</span>
                         </div>
                         <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Schwab', 'Intern Academy')">✓ APPLY</button>
-                            <button class="btn btn-info" onclick="moreInfo('Schwab', 'Intern Academy')">ℹ INFO</button>
-                            <button class="btn btn-skip" onclick="skipJob('Schwab', 'Intern Academy')">✕ SKIP</button>
+                            <button class="btn btn-apply" onclick="applyNow('https://hsf.net/scholarships')">🚀 APPLY NOW</button>
+                            <button class="btn btn-info" onclick="moreInfo('HSF', 'Scholarships')">ℹ INFO</button>
                         </div>
                     </div>
+                    
+                    <div class="job-item safe" data-deadline="2026-12-15" data-company="Google" data-type="scholarship">
+                        <div class="job-header">
+                            <div class="job-company">Google Generation Scholarship</div>
+                            <div class="deadline safe">📅 Due: Dec 15, 2026</div>
+                        </div>
+                        <div class="job-role">$10,000 | CS Students</div>
+                        <div class="job-tags">
+                            <span class="tag">💰 $10K</span>
+                            <span class="tag">🎓 Scholarship</span>
+                            <span class="tag diversity">Underrepresented ✓</span>
+                        </div>
+                        <div class="actions">
+                            <button class="btn btn-apply" onclick="applyNow('https://buildyourfuture.withgoogle.com/scholarships')">🚀 APPLY NOW</button>
+                            <button class="btn btn-info" onclick="moreInfo('Google', 'Generation Scholarship')">ℹ INFO</button>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -422,20 +629,20 @@
                 
                 <div id="tab-progress" class="tab-content active">
                     <h2>Weekly Progress</h2>
-                    <div class="progress-section">
+                    <div style="margin-top: 20px;">
                         <p>Applications Goal: <strong>25/week</strong></p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%">0/25</div>
+                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
+                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">0/25</div>
                         </div>
                         
-                        <p style="margin-top: 20px">Response Rate Target: <strong>10-20%</strong></p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%">0%</div>
+                        <p style="margin-top: 20px">Scholarship Applications: <strong>15 target</strong></p>
+                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
+                            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">0/15</div>
                         </div>
                         
-                        <p style="margin-top: 20px">Overall Goal: <strong>100 Applications</strong></p>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 0%">0/100</div>
+                        <p style="margin-top: 20px">Total Value Goal: <strong>$50,000+</strong></p>
+                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
+                            <div style="background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">$0/$50K</div>
                         </div>
                     </div>
                 </div>
@@ -444,24 +651,28 @@
                     <h2>Priority Companies</h2>
                     <ul class="company-list">
                         <li class="company-item">
-                            <span>Google - STEP</span>
-                            <span class="status-badge status-searching">🔍 Searching</span>
+                            <span>🔴 Dell Scholars</span>
+                            <span class="status-badge" style="background: #e74c3c; color: white;">Due Feb 15</span>
                         </li>
                         <li class="company-item">
-                            <span>JPMorgan - Early Insights</span>
-                            <span class="status-badge status-searching">🔍 Searching</span>
+                            <span>🟡 SHPE Scholarships</span>
+                            <span class="status-badge" style="background: #f39c12; color: white;">Due Mar 1</span>
                         </li>
                         <li class="company-item">
-                            <span>Charles Schwab</span>
-                            <span class="status-badge status-searching">🔍 Searching</span>
+                            <span>🟡 Goldman Sachs</span>
+                            <span class="status-badge" style="background: #f39c12; color: white;">Due Mar 15</span>
                         </li>
                         <li class="company-item">
-                            <span>Capital One - DDL</span>
-                            <span class="status-badge status-searching">🔍 Searching</span>
+                            <span>🟢 JPMorgan Early Insights</span>
+                            <span class="status-badge status-searching">Due Apr 1</span>
                         </li>
                         <li class="company-item">
-                            <span>Microsoft - Explore</span>
-                            <span class="status-badge status-searching">🔍 Searching</span>
+                            <span>🟢 Capital One DDL</span>
+                            <span class="status-badge status-searching">Due Apr 15</span>
+                        </li>
+                        <li class="company-item">
+                            <span>🟢 Google STEP</span>
+                            <span class="status-badge status-searching">Due May 1</span>
                         </li>
                     </ul>
                 </div>
@@ -477,13 +688,13 @@
                 <span class="quick-link-icon">📋</span>
                 <span>Project Board</span>
             </a>
-            <a href="../MASTER_PLAN.md" class="quick-link">
-                <span class="quick-link-icon">📖</span>
-                <span>Master Plan</span>
+            <a href="../MIGUEL_APPLICATION_MASTER_LIST.md" class="quick-link">
+                <span class="quick-link-icon">📝</span>
+                <span>Full Application List</span>
             </a>
-            <a href="../research/DIVERSITY_PROGRAMS.md" class="quick-link">
-                <span class="quick-link-icon">🌟</span>
-                <span>Diversity Programs</span>
+            <a href="../scholarships/SCHOLARSHIP_SOURCES.md" class="quick-link">
+                <span class="quick-link-icon">💰</span>
+                <span>All Scholarships</span>
             </a>
         </div>
         
@@ -498,6 +709,27 @@
             event.target.classList.add('active');
         }
         
+        function sortBy(criteria) {
+            // Update button states
+            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            const list = document.getElementById('opportunities-list');
+            const items = Array.from(list.children);
+            
+            items.sort((a, b) => {
+                if (criteria === 'deadline') {
+                    return new Date(a.dataset.deadline) - new Date(b.dataset.deadline);
+                } else if (criteria === 'company') {
+                    return a.dataset.company.localeCompare(b.dataset.company);
+                } else if (criteria === 'type') {
+                    return a.dataset.type.localeCompare(b.dataset.type);
+                }
+            });
+            
+            items.forEach(item => list.appendChild(item));
+        }
+        
         function approveJob(company, role) {
             alert('✅ APPROVED: ' + company + ' - ' + role + '\n\nI will now:\n• Tailor your resume\n• Fill out the application\n• Submit it for you\n\nCheck Telegram for confirmation!');
         }
@@ -510,52 +742,11 @@
             alert('ℹ️ MORE INFO:\n\n' + company + ' - ' + role + '\n\nFull details coming to Telegram...');
         }
         
+        function applyNow(url) {
+            window.open(url, '_blank');
+        }
+        
         document.getElementById('last-updated').textContent = new Date().toLocaleString();
     </script>
 </body>
 </html>
-
-<!-- Add Sources Panel -->
-<div class="panel" style="margin-top: 30px;">
-    <h2>📡 Internship Sources</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
-        
-        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
-            <h3 style="color: #667eea; margin-bottom: 10px;">🎯 Top Priority</h3>
-            <ul style="list-style: none; line-height: 2;">
-                <li>✅ LinkedIn Job Alerts</li>
-                <li>⏳ Jopwell (Diversity)</li>
-                <li>⏳ WayUp</li>
-                <li>⏳ Wall Street Oasis</li>
-                <li>⏳ Handshake</li>
-            </ul>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
-            <h3 style="color: #27ae60; margin-bottom: 10px;">📧 Email Lists Active</h3>
-            <ul style="list-style: none; line-height: 2;">
-                <li>📬 LinkedIn Daily Alerts</li>
-                <li>📬 WayUp Weekly Digest</li>
-                <li>📬 Jopwell Opportunities</li>
-                <li>📬 Company Career Pages</li>
-                <li>📬 Indeed Job Matches</li>
-            </ul>
-        </div>
-        
-        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
-            <h3 style="color: #e74c3c; margin-bottom: 10px;">🌟 Diversity Programs</h3>
-            <ul style="list-style: none; line-height: 2;">
-                <li>🔍 Jopwell</li>
-                <li>🔍 SEO</li>
-                <li>🔍 InRoads</li>
-                <li>🔍 HSF Careers</li>
-                <li>🔍 MLT</li>
-            </ul>
-        </div>
-        
-    </div>
-    <p style="margin-top: 20px; color: #666;">
-        <strong>Monitoring:</strong> 35+ sources checked daily • New jobs appear in "Pending Approval" above
-    </p>
-</div>
-
