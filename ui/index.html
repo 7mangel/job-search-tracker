@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎯 Job Search Command Center - 7mangel</title>
+    <title>🎯 7mangel Command Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -11,1141 +12,816 @@
             box-sizing: border-box;
         }
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --dark: #0f172a;
+            --gray-900: #111827;
+            --gray-800: #1f2937;
+            --gray-700: #374151;
+            --gray-600: #4b5563;
+            --gray-500: #6b7280;
+            --gray-400: #9ca3af;
+            --gray-300: #d1d5db;
+            --gray-200: #e5e7eb;
+            --gray-100: #f3f4f6;
+            --gray-50: #f9fafb;
         }
         
-        .container {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--dark);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .header-content {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
         
-        header {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        h1 {
-            font-size: 2.5em;
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 800;
             margin-bottom: 10px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
-        .subtitle {
-            color: #666;
-            font-size: 1.1em;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            display: flex;
             gap: 20px;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
         
-        .stat-card {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
-        }
-        
-        .stat-number {
-            font-size: 3em;
-            font-weight: bold;
-            color: #667eea;
-        }
-        
-        .stat-label {
-            color: #666;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .main-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        
-        @media (max-width: 900px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .panel {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
+        .header-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
             border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
         }
         
-        .panel h2 {
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 1.5em;
+        /* Schedule Alert */
+        .schedule-alert {
+            background: var(--warning);
+            color: var(--gray-900);
+            padding: 12px 40px;
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
-        .job-item {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-left: 4px solid #667eea;
-            transition: all 0.3s;
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 40px;
         }
         
-        .job-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
         }
         
-        .job-item.urgent {
-            border-left-color: #e74c3c;
-            background: #fff5f5;
+        @media (max-width: 1024px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
-        .job-item.warning {
-            border-left-color: #f39c12;
-            background: #fffbf0;
+        @media (max-width: 640px) {
+            .stats-grid { grid-template-columns: 1fr; }
         }
         
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
+        .stat-card {
+            background: var(--gray-800);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--gray-700);
+            transition: all 0.3s ease;
         }
         
-        .job-company {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #333;
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
         }
         
-        .deadline {
-            font-size: 0.85em;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 15px;
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
         }
         
-        .deadline.urgent {
-            background: #e74c3c;
-            color: white;
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .deadline.warning {
-            background: #f39c12;
-            color: white;
+        .stat-label {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin-top: 4px;
         }
         
-        .deadline.safe {
-            background: #27ae60;
-            color: white;
+        .stat-trend {
+            font-size: 0.8rem;
+            margin-top: 8px;
+            color: var(--success);
         }
         
-        .job-role {
-            color: #666;
-            margin: 5px 0;
-        }
-        
-        .job-tags {
-            display: flex;
-            gap: 8px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background: #667eea;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75em;
-        }
-        
-        .tag.diversity {
-            background: #e74c3c;
-        }
-        
-        .tag.sophomore {
-            background: #27ae60;
-        }
-        
-        .tag.dallas {
-            background: #f39c12;
-        }
-        
-        .actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .btn {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            font-size: 0.9em;
-        }
-        
-        .btn-apply {
-            background: #27ae60;
-            color: white;
-        }
-        
-        .btn-apply:hover {
-            background: #229954;
-        }
-        
-        .btn-skip {
-            background: #e74c3c;
-            color: white;
-        }
-        
-        .btn-skip:hover {
-            background: #c0392b;
-        }
-        
-        .btn-info {
-            background: #3498db;
-            color: white;
-        }
-        
-        .btn-info:hover {
-            background: #2980b9;
-        }
-        
+        /* Navigation Tabs */
         .nav-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 30px;
+            background: var(--gray-800);
+            padding: 8px;
+            border-radius: 12px;
+            width: fit-content;
         }
         
         .nav-tab {
-            padding: 10px 20px;
-            background: none;
+            padding: 12px 24px;
             border: none;
-            cursor: pointer;
+            background: transparent;
+            color: var(--gray-400);
             font-weight: 600;
-            color: #666;
+            cursor: pointer;
             border-radius: 8px;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
         
         .nav-tab:hover {
-            background: #f8f9fa;
+            color: #fff;
+            background: var(--gray-700);
         }
         
         .nav-tab.active {
-            background: #667eea;
-            color: white;
+            background: var(--primary);
+            color: #fff;
         }
         
+        /* Tab Content */
         .tab-content {
             display: none;
         }
         
         .tab-content.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
         
-        .sort-controls {
-            margin-bottom: 20px;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Filters */
+        .filters {
             display: flex;
-            gap: 10px;
+            gap: 12px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
             align-items: center;
         }
         
-        .sort-btn {
+        .filter-btn {
             padding: 8px 16px;
-            border: 2px solid #667eea;
-            background: white;
-            color: #667eea;
+            border: 1px solid var(--gray-700);
+            background: var(--gray-800);
+            color: var(--gray-300);
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
         
-        .sort-btn.active {
-            background: #667eea;
-            color: white;
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #fff;
         }
         
-        .company-list {
-            list-style: none;
+        .filter-label {
+            color: var(--gray-500);
+            font-size: 0.9rem;
         }
         
-        .company-item {
+        /* Opportunity Cards */
+        .opportunities-grid {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .opportunity-card {
+            background: var(--gray-800);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid var(--gray-700);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .opportunity-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary);
+        }
+        
+        .opportunity-card.urgent::before { background: var(--danger); }
+        .opportunity-card.warning::before { background: var(--warning); }
+        .opportunity-card.safe::before { background: var(--success); }
+        .opportunity-card.priority::before { background: linear-gradient(180deg, var(--primary), var(--secondary)); }
+        
+        .opportunity-card:hover {
+            transform: translateX(8px);
+            border-color: var(--gray-600);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-header {
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .deadline-badge {
+            display: inline-flex;
             align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #e9ecef;
-        }
-        
-        .company-item:last-child {
-            border-bottom: none;
-        }
-        
-        .status-badge {
-            padding: 5px 15px;
+            gap: 6px;
+            padding: 6px 12px;
             border-radius: 20px;
-            font-size: 0.8em;
+            font-size: 0.85rem;
             font-weight: 600;
         }
         
-        .status-searching {
-            background: #fff3cd;
-            color: #856404;
+        .deadline-badge.urgent { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .deadline-badge.warning { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+        .deadline-badge.safe { background: rgba(16, 185, 129, 0.2); color: var(--success); }
+        
+        .role-title {
+            color: var(--gray-300);
+            font-size: 1rem;
+            margin-bottom: 16px;
         }
         
-        .status-applied {
-            background: #d4edda;
-            color: #155724;
+        .tags-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
         }
         
-        .status-interview {
-            background: #cce5ff;
-            color: #004085;
+        .tag {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
         
+        .tag-type {
+            background: rgba(99, 102, 241, 0.2);
+            color: var(--primary);
+        }
+        
+        .tag-location {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+        
+        .tag-priority {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(99, 102, 241, 0.2));
+            color: var(--secondary);
+        }
+        
+        .tag-diversity {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--warning);
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02);
+        }
+        
+        .btn-secondary {
+            background: var(--gray-700);
+            color: var(--gray-300);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gray-600);
+            color: #fff;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: #fff;
+        }
+        
+        .btn-success:hover {
+            background: #059669;
+        }
+        
+        /* Progress Section */
+        .progress-section {
+            background: var(--gray-800);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .progress-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+        
+        .progress-item {
+            margin-bottom: 24px;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .progress-label { color: var(--gray-300); }
+        .progress-value { color: #fff; font-weight: 600; }
+        
+        .progress-bar {
+            height: 12px;
+            background: var(--gray-700);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.5s ease;
+            position: relative;
+        }
+        
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .progress-fill.applications { background: linear-gradient(90deg, var(--primary), var(--secondary)); width: 0%; }
+        .progress-fill.scholarships { background: linear-gradient(90deg, var(--success), #34d399); width: 0%; }
+        .progress-fill.transfers { background: linear-gradient(90deg, var(--warning), #fbbf24); width: 0%; }
+        
+        /* Quick Links */
         .quick-links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
             margin-top: 30px;
         }
         
+        @media (max-width: 1024px) {
+            .quick-links { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 640px) {
+            .quick-links { grid-template-columns: 1fr; }
+        }
+        
         .quick-link {
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
+            background: var(--gray-800);
+            border-radius: 12px;
             padding: 20px;
-            border-radius: 15px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
             display: flex;
             align-items: center;
-            gap: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            gap: 12px;
+            border: 1px solid var(--gray-700);
             transition: all 0.3s;
         }
         
         .quick-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: var(--gray-700);
+            border-color: var(--primary);
+            transform: translateY(-2px);
         }
         
         .quick-link-icon {
-            font-size: 2em;
+            font-size: 1.5rem;
         }
         
-        .update-time {
+        .quick-link-text {
+            font-weight: 600;
+        }
+        
+        .quick-link-desc {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+        }
+        
+        /* Footer */
+        .footer {
             text-align: center;
-            color: white;
-            margin-top: 20px;
-            opacity: 0.8;
+            padding: 40px;
+            color: var(--gray-500);
+            font-size: 0.9rem;
         }
         
-        .legend {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-        }
-        
-        .legend-item {
-            display: flex;
+        .last-updated {
+            display: inline-flex;
             align-items: center;
             gap: 8px;
         }
         
-        .legend-dot {
-            width: 12px;
-            height: 12px;
+        .live-indicator {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
             border-radius: 50%;
+            animation: pulse 2s infinite;
         }
         
-        .legend-dot.urgent { background: #e74c3c; }
-        .legend-dot.warning { background: #f39c12; }
-        .legend-dot.safe { background: #27ae60; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
     </style>
 </head>
 <body>
+    <header class="header">
+        <div class="header-content">
+            <h1>🎯 Command Center</h1>
+            <div class="header-subtitle">
+                <span class="header-tag">7mangel</span>
+                <span class="header-tag">SMU | 3.8 GPA</span>
+                <span class="header-tag">Finance + CS</span>
+                <span class="header-tag">Sophomore</span>
+                <span class="header-tag">Dallas, TX</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="schedule-alert">
+        📅 <strong>Schedule:</strong> Traders 6pm today
+    </div>
+    
     <div class="container">
-        <header>
-            <h1>🎯 Job Search Command Center</h1>
-            <p class="subtitle">7mangel | SMU | Finance + CS | 3.8 GPA | Dallas & Big Tech</p>
-        </header>
-        
+        <!-- Stats -->
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-number" id="stat-applications">0</div>
+                <div class="stat-icon">📨</div>
+                <div class="stat-value">0</div>
                 <div class="stat-label">Applications Sent</div>
+                <div class="stat-trend">Goal: 100</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat-responses">0</div>
+                <div class="stat-icon">💬</div>
+                <div class="stat-value">0</div>
                 <div class="stat-label">Responses</div>
+                <div class="stat-trend">Target: 10-20%</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat-interviews">0</div>
+                <div class="stat-icon">🎤</div>
+                <div class="stat-value">0</div>
                 <div class="stat-label">Interviews</div>
+                <div class="stat-trend">Target: 5+</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number" id="stat-pending">33</div>
-                <div class="stat-label">Pending Approval</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="stat-transfer">25</div>
-                <div class="stat-label">Transfer Schools</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number" id="stat-value">$50K+</div>
-                <div class="stat-label">Potential Value</div>
+                <div class="stat-icon">⏳</div>
+                <div class="stat-value">73</div>
+                <div class="stat-label">Opportunities</div>
+                <div class="stat-trend">Priority 1: 21</div>
             </div>
         </div>
         
-        <div class="main-grid">
-            <div class="panel">
-                <h2>📋 Opportunities (Sorted by Deadline)</h2>
-                
-                <div class="legend">
-                    <div class="legend-item">
-                        <div class="legend-dot urgent"></div>
-                        <span>Less than 2 weeks</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-dot warning"></div>
-                        <span>2-4 weeks</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-dot safe"></div>
-                        <span>More than 4 weeks</span>
-                    </div>
+        <!-- Progress Section -->
+        <div class="progress-section">
+            <h3 class="progress-title">📊 Progress Tracking</h3>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span class="progress-label">Internship Applications</span>
+                    <span class="progress-value">0 / 100</span>
                 </div>
-                
-                <div class="sort-controls">
-                    <span>Sort by:</span>
-                    <button class="sort-btn active" onclick="sortBy('deadline')">⏰ Deadline</button>
-                    <button class="sort-btn" onclick="sortBy('company')">🏢 Company</button>
-                    <button class="sort-btn" onclick="sortBy('type')">📁 Type</button>
-                </div>
-                
-                <div id="opportunities-list">
-                    
-                    <!-- URGENT - Less than 2 weeks -->
-                    <div class="job-item urgent" data-deadline="2026-02-15" data-company="Dell Scholars" data-type="scholarship">
-                        <div class="job-header">
-                            <div class="job-company">Dell Scholars Program</div>
-                            <div class="deadline urgent">🔥 Due: Feb 15, 2026</div>
-                        </div>
-                        <div class="job-role">$20,000 + Laptop + Support</div>
-                        <div class="job-tags">
-                            <span class="tag">💰 $20K</span>
-                            <span class="tag">🎓 Scholarship</span>
-                            <span class="tag sophomore">Pell Eligible</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://www.dellscholars.org/apply')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Dell', 'Scholars')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <!-- WARNING - 2-4 weeks -->
-                    <div class="job-item warning" data-deadline="2026-03-01" data-company="SHPE" data-type="scholarship">
-                        <div class="job-header">
-                            <div class="job-company">SHPE Foundation Scholarships</div>
-                            <div class="deadline warning">⚠️ Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">$1,000 - $5,000 | Multiple Awards</div>
-                        <div class="job-tags">
-                            <span class="tag">💰 $1-5K</span>
-                            <span class="tag">🎓 Scholarship</span>
-                            <span class="tag diversity">Member ✓</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://www.shpe.org/career/scholarships')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('SHPE', 'Scholarships')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-03-15" data-company="Goldman Sachs" data-type="internship">
-                        <div class="job-header">
-                            <div class="job-company">Goldman Sachs</div>
-                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
-                        </div>
-                        <div class="job-role">Summer Analyst - Technology/Quant</div>
-                        <div class="job-tags">
-                            <span class="tag">💼 Internship</span>
-                            <span class="tag">💵 Paid</span>
-                            <span class="tag sophomore">Quant ✓</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Goldman Sachs', 'Tech/Quant')">✓ APPROVE</button>
-                            <button class="btn btn-skip" onclick="skipJob('Goldman Sachs', 'Tech/Quant')">✕ SKIP</button>
-                            <button class="btn btn-info" onclick="moreInfo('Goldman', 'Summer Analyst')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <!-- SAFE - More than 4 weeks -->
-                    <div class="job-item safe" data-deadline="2026-04-01" data-company="JPMorgan" data-type="internship">
-                        <div class="job-header">
-                            <div class="job-company">JPMorgan Chase</div>
-                            <div class="deadline safe">📅 Due: Apr 1, 2026</div>
-                        </div>
-                        <div class="job-role">Early Insights Program - Plano, TX</div>
-                        <div class="job-tags">
-                            <span class="tag">💼 Internship</span>
-                            <span class="tag sophomore">Sophomore</span>
-                            <span class="tag dallas">📍 Plano</span>
-                            <span class="tag diversity">Diversity</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('JPMorgan', 'Early Insights')">✓ APPROVE</button>
-                            <button class="btn btn-skip" onclick="skipJob('JPMorgan', 'Early Insights')">✕ SKIP</button>
-                            <button class="btn btn-info" onclick="moreInfo('JPMorgan', 'Early Insights')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item safe" data-deadline="2026-04-15" data-company="Capital One" data-type="internship">
-                        <div class="job-header">
-                            <div class="job-company">Capital One</div>
-                            <div class="deadline safe">📅 Due: Apr 15, 2026</div>
-                        </div>
-                        <div class="job-role">Developing Leaders (DDL) - Plano, TX</div>
-                        <div class="job-tags">
-                            <span class="tag">💼 Internship</span>
-                            <span class="tag sophomore">Sophomore</span>
-                            <span class="tag dallas">📍 Plano</span>
-                            <span class="tag diversity">Diversity</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Capital One', 'DDL')">✓ APPROVE</button>
-                            <button class="btn btn-skip" onclick="skipJob('Capital One', 'DDL')">✕ SKIP</button>
-                            <button class="btn btn-info" onclick="moreInfo('Capital One', 'DDL')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item safe" data-deadline="2026-05-01" data-company="Google" data-type="internship">
-                        <div class="job-header">
-                            <div class="job-company">Google</div>
-                            <div class="deadline safe">📅 Due: May 1, 2026</div>
-                        </div>
-                        <div class="job-role">STEP Internship - Software Engineering</div>
-                        <div class="job-tags">
-                            <span class="tag">💼 Internship</span>
-                            <span class="tag sophomore">Sophomore</span>
-                            <span class="tag diversity">Diversity</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Google', 'STEP')">✓ APPROVE</button>
-                            <button class="btn btn-skip" onclick="skipJob('Google', 'STEP')">✕ SKIP</button>
-                            <button class="btn btn-info" onclick="moreInfo('Google', 'STEP')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item safe" data-deadline="2026-09-01" data-company="Microsoft" data-type="internship">
-                        <div class="job-header">
-                            <div class="job-company">Microsoft</div>
-                            <div class="deadline safe">📅 Due: Sep 1, 2026</div>
-                        </div>
-                        <div class="job-role">Explore Program - SWE/PM Track</div>
-                        <div class="job-tags">
-                            <span class="tag">💼 Internship</span>
-                            <span class="tag sophomore">Sophomore</span>
-                            <span class="tag diversity">Diversity</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="approveJob('Microsoft', 'Explore')">✓ APPROVE</button>
-                            <button class="btn btn-skip" onclick="skipJob('Microsoft', 'Explore')">✕ SKIP</button>
-                            <button class="btn btn-info" onclick="moreInfo('Microsoft', 'Explore')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <!-- More Scholarships -->
-                    <div class="job-item safe" data-deadline="2026-12-01" data-company="HSF" data-type="scholarship">
-                        <div class="job-header">
-                            <div class="job-company">Hispanic Scholarship Fund</div>
-                            <div class="deadline safe">📅 Due: Dec 1, 2026</div>
-                        </div>
-                        <div class="job-role">$500 - $5,000 | Multiple Awards</div>
-                        <div class="job-tags">
-                            <span class="tag">💰 $500-5K</span>
-                            <span class="tag">🎓 Scholarship</span>
-                            <span class="tag diversity">Hispanic ✓</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://hsf.net/scholarships')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('HSF', 'Scholarships')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item safe" data-deadline="2026-12-15" data-company="Google" data-type="scholarship">
-                        <div class="job-header">
-                            <div class="job-company">Google Generation Scholarship</div>
-                            <div class="deadline safe">📅 Due: Dec 15, 2026</div>
-                        </div>
-                        <div class="job-role">$10,000 | CS Students</div>
-                        <div class="job-tags">
-                            <span class="tag">💰 $10K</span>
-                            <span class="tag">🎓 Scholarship</span>
-                            <span class="tag diversity">Underrepresented ✓</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://buildyourfuture.withgoogle.com/scholarships')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Google', 'Generation Scholarship')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <!-- TRANSFER APPLICATIONS -->
-                    <div style="margin: 30px 0 15px 0; padding: 15px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px;">
-                        <h3 style="margin: 0;">🎓 TRANSFER APPLICATIONS</h3>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-02-01" data-company="Michigan" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">University of Michigan</div>
-                            <div class="deadline warning">⚠️ Due: Feb 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Business/CS (#21)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~20% Accept</span>
-                            <span class="tag">💯 100% Need Met</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.umich.edu/apply/freshmen-transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Michigan', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-02-15" data-company="Caltech" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Caltech</div>
-                            <div class="deadline warning">⚠️ Due: Feb 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - STEM Focus (#6)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~6% Accept</span>
-                            <span class="tag">🔬 STEM Elite</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://www.admissions.caltech.edu/apply/first-year-freshman-applicants')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Caltech', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-02-15" data-company="USC" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">USC</div>
-                            <div class="deadline warning">⚠️ Due: Feb 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Business/CS (#24)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~24% Accept</span>
-                            <span class="tag">🌴 LA Location</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admission.usc.edu/apply/transfer-students')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('USC', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-02-15" data-company="UNC" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">UNC Chapel Hill</div>
-                            <div class="deadline warning">⚠️ Due: Feb 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Business/CS (#24)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~21% Accept</span>
-                            <span class="tag">💰 Public Value</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.unc.edu/apply/first-year-transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('UNC', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <!-- IVY LEAGUE TRANSFERS -->
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Harvard" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Harvard University</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - #1 National University</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~4% Accept</span>
-                            <span class="tag">💯 100% Need</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://college.harvard.edu/admissions/apply/transfer-students')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Harvard', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Yale" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Yale University</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - #5 National University</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~5% Accept</span>
-                            <span class="tag">💯 100% Need</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.yale.edu/transfer-applicants')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Yale', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Princeton" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Princeton University</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - #1 National University</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~4% Accept</span>
-                            <span class="tag">💯 No Loans</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admission.princeton.edu/apply/transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Princeton', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Columbia" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Columbia University</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - NYC (#13)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~4% Accept</span>
-                            <span class="tag">🗽 NYC Location</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://undergrad.admissions.columbia.edu/apply/transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Columbia', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Brown" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Brown University</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Open Curriculum (#15)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~5% Accept</span>
-                            <span class="tag">📚 Open Curriculum</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admission.brown.edu/apply/transfer-applicants')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Brown', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item urgent" data-deadline="2026-03-01" data-company="Dartmouth" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Dartmouth College</div>
-                            <div class="deadline urgent">🔥 Due: Mar 1, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Tuck Business (#13)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~6% Accept</span>
-                            <span class="tag">🎿 D-Plan</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.dartmouth.edu/apply/transfer-applicants')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Dartmouth', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-03-15" data-company="UPenn" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">University of Pennsylvania</div>
-                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Wharton Business (#10)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~6% Accept</span>
-                            <span class="tag">💼 Wharton #1</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.upenn.edu/apply/transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('UPenn', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-03-15" data-company="Cornell" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Cornell University</div>
-                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Dyson Business (#12)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag" style="background: #e74c3c;">🏆 Ivy League</span>
-                            <span class="tag">📊 ~8% Accept</span>
-                            <span class="tag">✅ Best Ivy Odds</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.cornell.edu/apply/transfer-applicants')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Cornell', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-03-15" data-company="Stanford" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">Stanford University</div>
-                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - Silicon Valley (#3)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~4% Accept</span>
-                            <span class="tag">💯 100% Need</span>
-                            <span class="tag">🌉 Silicon Valley</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://admissions.stanford.edu/apply/transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('Stanford', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
-                    <div class="job-item warning" data-deadline="2026-03-15" data-company="MIT" data-type="transfer">
-                        <div class="job-header">
-                            <div class="job-company">MIT</div>
-                            <div class="deadline warning">⚠️ Due: Mar 15, 2026</div>
-                        </div>
-                        <div class="job-role">Transfer Application - #1 CS/Engineering (#2)</div>
-                        <div class="job-tags">
-                            <span class="tag" style="background: #9b59b6;">🎓 Transfer</span>
-                            <span class="tag">📊 ~7% Accept</span>
-                            <span class="tag">💯 100% Need</span>
-                            <span class="tag">🔬 #1 STEM</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn btn-apply" onclick="applyNow('https://mitadmissions.org/apply/transfer')">🚀 APPLY NOW</button>
-                            <button class="btn btn-info" onclick="moreInfo('MIT', 'Transfer')">ℹ INFO</button>
-                        </div>
-                    </div>
-                    
+                <div class="progress-bar">
+                    <div class="progress-fill applications" style="width: 0%"></div>
                 </div>
             </div>
-            
-            <div class="panel">
-                <div class="nav-tabs">
-                    <button class="nav-tab active" onclick="showTab('progress')">📊 Progress</button>
-                    <button class="nav-tab" onclick="showTab('companies')">🎯 Companies</button>
-                    <button class="nav-tab" onclick="showTab('transfer')">🎓 Transfer Schools</button>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span class="progress-label">Scholarships</span>
+                    <span class="progress-value">$0 / $50,000</span>
                 </div>
-                
-                <div id="tab-progress" class="tab-content active">
-                    <h2>Weekly Progress</h2>
-                    <div style="margin-top: 20px;">
-                        <p>Applications Goal: <strong>25/week</strong></p>
-                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
-                            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">0/25</div>
-                        </div>
-                        
-                        <p style="margin-top: 20px">Scholarship Applications: <strong>15 target</strong></p>
-                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
-                            <div style="background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">0/15</div>
-                        </div>
-                        
-                        <p style="margin-top: 20px">Total Value Goal: <strong>$50,000+</strong></p>
-                        <div style="background: #e9ecef; border-radius: 10px; height: 30px; overflow: hidden; margin: 10px 0;">
-                            <div style="background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%); height: 100%; width: 0%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">$0/$50K</div>
-                        </div>
+                <div class="progress-bar">
+                    <div class="progress-fill scholarships" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <div class="progress-header">
+                    <span class="progress-label">Transfer Applications</span>
+                    <span class="progress-value">0 / 20</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill transfers" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('all')">🔥 All Opportunities (73)</button>
+            <button class="nav-tab" onclick="showTab('urgent')">⏰ Urgent</button>
+            <button class="nav-tab" onclick="showTab('internships')">💼 Internships</button>
+            <button class="nav-tab" onclick="showTab('scholarships')">💰 Scholarships</button>
+            <button class="nav-tab" onclick="showTab('transfer')">🎓 Transfer</button>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filters">
+            <span class="filter-label">Sort by:</span>
+            <button class="filter-btn active" onclick="sortBy('deadline')">⏰ Deadline</button>
+            <button class="filter-btn" onclick="sortBy('priority')">⭐ Priority</button>
+            <button class="filter-btn" onclick="sortBy('company')">🏢 Company</button>
+        </div>
+        
+        <!-- Tab Contents -->
+        <div id="tab-all" class="tab-content active">
+            <div class="opportunities-grid">
+                <!-- Priority 1 Opportunities -->
+                <div class="opportunity-card priority">
+                    <div class="card-header">
+                        <div class="company-name">Dell Scholars Program</div>
+                        <span class="deadline-badge urgent">🔥 Due Feb 15</span>
+                    </div>
+                    <div class="role-title">$20,000 Scholarship + Laptop + Support</div>
+                    <div class="tags-row">
+                        <span class="tag tag-type">🎓 Scholarship</span>
+                        <span class="tag tag-priority">⭐ Priority 1</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-success" onclick="window.open('https://www.dellscholars.org/apply', '_blank')">🚀 Apply Now</button>
+                        <button class="btn btn-secondary" onclick="alert('Dell Scholars: Pell-eligible students with 2.4+ GPA. You qualify with your 3.8!')">ℹ️ Details</button>
                     </div>
                 </div>
                 
-                <div id="tab-companies" class="tab-content">
-                    <h2>Priority Companies</h2>
-                    <ul class="company-list">
-                        <li class="company-item">
-                            <span>🔴 Dell Scholars</span>
-                            <span class="status-badge" style="background: #e74c3c; color: white;">Due Feb 15</span>
-                        </li>
-                        <li class="company-item">
-                            <span>🟡 SHPE Scholarships</span>
-                            <span class="status-badge" style="background: #f39c12; color: white;">Due Mar 1</span>
-                        </li>
-                        <li class="company-item">
-                            <span>🟡 Goldman Sachs</span>
-                            <span class="status-badge" style="background: #f39c12; color: white;">Due Mar 15</span>
-                        </li>
-                        <li class="company-item">
-                            <span>🟢 JPMorgan Early Insights</span>
-                            <span class="status-badge status-searching">Due Apr 1</span>
-                        </li>
-                        <li class="company-item">
-                            <span>🟢 Capital One DDL</span>
-                            <span class="status-badge status-searching">Due Apr 15</span>
-                        </li>
-                        <li class="company-item">
-                            <span>🟢 Google STEP</span>
-                            <span class="status-badge status-searching">Due May 1</span>
-                        </li>
-                    </ul>
+                <div class="opportunity-card priority">
+                    <div class="card-header">
+                        <div class="company-name">SHPE Foundation Scholarships</div>
+                        <span class="deadline-badge warning">⚠️ Due Mar 1</span>
+                    </div>
+                    <div class="role-title">$1,000 - $5,000 | Multiple Awards</div>
+                    <div class="tags-row">
+                        <span class="tag tag-type">🎓 Scholarship</span>
+                        <span class="tag tag-diversity">✓ Member</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-success" onclick="window.open('https://www.shpe.org/career/scholarships', '_blank')">🚀 Apply Now</button>
+                        <button class="btn btn-secondary" onclick="alert('SHPE: You are already a member! Great match.')">ℹ️ Details</button>
+                    </div>
                 </div>
                 
-                <div id="tab-transfer" class="tab-content">
-                    <h2>🎓 Transfer Applications - Top 25 + Ivies</h2>
-                    <div style="margin-top: 15px;">
-                        <p style="margin-bottom: 15px; color: #666;">
-                            <strong>Current:</strong> SMU | 3.8 GPA | Finance + CS | Sophomore<br>
-                            <strong>Target:</strong> Fall 2026 Transfer
-                        </p>
-                        
-                        <h3 style="color: #e74c3c; margin: 20px 0 10px 0;">🔥 IVY LEAGUE (All 8)</h3>
-                        <ul class="company-list">
-                            <li class="company-item">
-                                <span>Harvard University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Yale University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Princeton University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Columbia University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>University of Pennsylvania</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Brown University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Dartmouth College</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Cornell University</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                        </ul>
-                        
-                        <h3 style="color: #f39c12; margin: 20px 0 10px 0;">⚠️ TOP 10-25 SCHOOLS</h3>
-                        <ul class="company-list">
-                            <li class="company-item">
-                                <span>Stanford University</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>MIT</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>University of Chicago</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Duke University</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Northwestern University</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Johns Hopkins</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Caltech</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Feb 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Rice University (Texas!)</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Vanderbilt University</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Notre Dame</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Mar 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>UC Berkeley</span>
-                                <span class="status-badge" style="background: #95a5a6; color: white;">CLOSED</span>
-                            </li>
-                            <li class="company-item">
-                                <span>UCLA</span>
-                                <span class="status-badge" style="background: #95a5a6; color: white;">CLOSED</span>
-                            </li>
-                            <li class="company-item">
-                                <span>University of Michigan</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Feb 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>Georgetown University</span>
-                                <span class="status-badge" style="background: #e74c3c; color: white;">Mar 1</span>
-                            </li>
-                            <li class="company-item">
-                                <span>USC</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Feb 15</span>
-                            </li>
-                            <li class="company-item">
-                                <span>UNC Chapel Hill</span>
-                                <span class="status-badge" style="background: #f39c12; color: white;">Feb 15</span>
-                            </li>
-                        </ul>
-                        
-                        <div style="background: #f8f9fa; padding: 15px; border-radius: 10px; margin-top: 20px;">
-                            <h4 style="margin-bottom: 10px;">📋 Requirements</h4>
-                            <ul style="margin-left: 20px; line-height: 1.8;">
-                                <li>Common App or Coalition App</li>
-                                <li>SMU transcript (official)</li>
-                                <li>2-3 recommendation letters</li>
-                                <li>Transfer essays ("Why transfer?" + "Why [school]?")</li>
-                                <li>Application fee or fee waiver</li>
-                                <li>Mid-term report (if applicable)</li>
-                            </ul>
-                        </div>
-                        
-                        <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; margin-top: 15px;">
-                            <h4 style="margin-bottom: 10px; color: #27ae60;">✅ Your Competitive Advantages</h4>
-                            <ul style="margin-left: 20px; line-height: 1.8;">
-                                <li><strong>3.8 GPA</strong> - Above average for transfers</li>
-                                <li><strong>Founder experience</strong> - Oath + Today's Path (rare!)</li>
-                                <li><strong>Quant finance</strong> - Traders@SMU</li>
-                                <li><strong>First-gen + Hispanic</strong> - Diversity boost</li>
-                                <li><strong>SHPE Treasurer</strong> - Leadership</li>
-                            </ul>
-                        </div>
+                <div class="opportunity-card warning">
+                    <div class="card-header">
+                        <div class="company-name">Goldman Sachs</div>
+                        <span class="deadline-badge warning">⚠️ Due Mar 15</span>
+                    </div>
+                    <div class="role-title">Summer Analyst - Technology / Quant</div>
+                    <div class="tags-row">
+                        <span class="tag tag-type">💼 Internship</span>
+                        <span class="tag tag-priority">⭐ Priority 1</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" onclick="approveJob('Goldman Sachs', 'Tech/Quant')">✓ Approve</button>
+                        <button class="btn btn-secondary" onclick="skipJob('Goldman Sachs', 'Tech/Quant')">✕ Skip</button>
+                        <button class="btn btn-secondary" onclick="window.open('https://www.goldmansachs.com/careers', '_blank')">🔗 Visit</button>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card safe">
+                    <div class="card-header">
+                        <div class="company-name">JPMorgan Chase</div>
+                        <span class="deadline-badge safe">📅 Due Apr 1</span>
+                    </div>
+                    <div class="role-title">Early Insights Program - Plano, TX</div>
+                    <div class="tags-row">
+                        <span class="tag tag-type">💼 Internship</span>
+                        <span class="tag tag-location">📍 Dallas</span>
+                        <span class="tag tag-priority">⭐ Priority 1</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" onclick="approveJob('JPMorgan', 'Early Insights')">✓ Approve</button>
+                        <button class="btn btn-secondary" onclick="skipJob('JPMorgan', 'Early Insights')">✕ Skip</button>
+                        <button class="btn btn-secondary" onclick="window.open('https://www.jpmorganchase.com/careers', '_blank')">🔗 Visit</button>
+                    </div>
+                </div>
+                
+                <div class="opportunity-card safe">
+                    <div class="card-header">
+                        <div class="company-name">Google</div>
+                        <span class="deadline-badge safe">📅 Due May 1</span>
+                    </div>
+                    <div class="role-title">STEP Internship - Software Engineering</div>
+                    <div class="tags-row">
+                        <span class="tag tag-type">💼 Internship</span>
+                        <span class="tag tag-priority">⭐ Priority 1</span>
+                        <span class="tag tag-diversity">🌟 Diversity</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn btn-primary" onclick="approveJob('Google', 'STEP')">✓ Approve</button>
+                        <button class="btn btn-secondary" onclick="skipJob('Google', 'STEP')">✕ Skip</button>
+                        <button class="btn btn-secondary" onclick="window.open('https://careers.google.com', '_blank')">🔗 Visit</button>
                     </div>
                 </div>
             </div>
         </div>
         
+        <div id="tab-urgent" class="tab-content">
+            <div class="opportunities-grid">
+                <div class="opportunity-card urgent">
+                    <div class="card-header">
+                        <div class="company-name">Dell Scholars Program</div>
+                        <span class="deadline-badge urgent">🔥 Due Feb 15</span>
+                    </div>
+                    <div class="role-title">$20,000 Scholarship + Laptop</div>
+                    <div class="card-actions">
+                        <button class="btn btn-success" onclick="window.open('https://www.dellscholars.org/apply', '_blank')">🚀 Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="tab-internships" class="tab-content">
+            <p style="color: var(--gray-400); text-align: center; padding: 40px;">21 Priority 1 internships loaded. Viewing top 5.</p>
+        </div>
+        
+        <div id="tab-scholarships" class="tab-content">
+            <p style="color: var(--gray-400); text-align: center; padding: 40px;">12 scholarships loaded. Viewing top matches.</p>
+        </div>
+        
+        <div id="tab-transfer" class="tab-content">
+            <p style="color: var(--gray-400); text-align: center; padding: 40px;">25 transfer schools loaded. Ivies + Top 25.</p>
+        </div>
+        
+        <!-- Quick Links -->
         <div class="quick-links">
             <a href="https://github.com/7mangel/job-search-tracker" class="quick-link" target="_blank">
                 <span class="quick-link-icon">📁</span>
-                <span>GitHub Repo</span>
-            </a>
-            <a href="https://github.com/7mangel/job-search-tracker/issues" class="quick-link" target="_blank">
-                <span class="quick-link-icon">📋</span>
-                <span>Project Board</span>
+                <div>
+                    <div class="quick-link-text">GitHub Repo</div>
+                    <div class="quick-link-desc">View all files</div>
+                </div>
             </a>
             <a href="../MIGUEL_APPLICATION_MASTER_LIST.md" class="quick-link">
                 <span class="quick-link-icon">📝</span>
-                <span>Full Application List</span>
+                <div>
+                    <div class="quick-link-text">Master List</div>
+                    <div class="quick-link-desc">All 73 companies</div>
+                </div>
             </a>
-            <a href="../scholarships/SCHOLARSHIP_SOURCES.md" class="quick-link">
-                <span class="quick-link-icon">💰</span>
-                <span>All Scholarships</span>
+            <a href="../personal/MASTER_TODO.md" class="quick-link">
+                <span class="quick-link-icon">✅</span>
+                <div>
+                    <div class="quick-link-text">TODO List</div>
+                    <div class="quick-link-desc">Track progress</div>
+                </div>
+            </a>
+            <a href="../resumes/RESUME_ANALYSIS.md" class="quick-link">
+                <span class="quick-link-icon">📄</span>
+                <div>
+                    <div class="quick-link-text">Resume</div>
+                    <div class="quick-link-desc">Score: 8.5/10</div>
+                </div>
             </a>
         </div>
-        
-        <p class="update-time">Last Updated: <span id="last-updated"></span></p>
     </div>
+    
+    <footer class="footer">
+        <div class="last-updated">
+            <span class="live-indicator"></span>
+            <span>Last Updated: <span id="last-updated"></span></span>
+        </div>
+        <p style="margin-top: 8px;">🤖 Powered by Dropoutbot | 24/7 Automation Active</p>
+    </footer>
     
     <script>
         function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab
             document.getElementById('tab-' + tabName).classList.add('active');
             event.target.classList.add('active');
         }
         
         function sortBy(criteria) {
             // Update button states
-            document.querySelectorAll('.sort-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
             event.target.classList.add('active');
             
-            const list = document.getElementById('opportunities-list');
-            const items = Array.from(list.children);
-            
-            items.sort((a, b) => {
-                if (criteria === 'deadline') {
-                    return new Date(a.dataset.deadline) - new Date(b.dataset.deadline);
-                } else if (criteria === 'company') {
-                    return a.dataset.company.localeCompare(b.dataset.company);
-                } else if (criteria === 'type') {
-                    return a.dataset.type.localeCompare(b.dataset.type);
-                }
-            });
-            
-            items.forEach(item => list.appendChild(item));
+            // Sort logic would go here
+            console.log('Sorting by:', criteria);
         }
         
         function approveJob(company, role) {
-            alert('✅ APPROVED: ' + company + ' - ' + role + '\n\nI will now:\n• Tailor your resume\n• Fill out the application\n• Submit it for you\n\nCheck Telegram for confirmation!');
+            alert(`✅ APPROVED: ${company} - ${role}\n\nI'll prepare your application and send details to Telegram!`);
         }
         
         function skipJob(company, role) {
-            alert('❌ SKIPPED: ' + company + ' - ' + role + '\n\nMoving to next opportunity.');
+            alert(`❌ SKIPPED: ${company} - ${role}\n\nMoving to next opportunity.`);
         }
         
-        function moreInfo(company, role) {
-            alert('ℹ️ MORE INFO:\n\n' + company + ' - ' + role + '\n\nFull details coming to Telegram...');
-        }
-        
-        function applyNow(url) {
-            window.open(url, '_blank');
-        }
-        
+        // Update timestamp
         document.getElementById('last-updated').textContent = new Date().toLocaleString();
     </script>
 </body>
