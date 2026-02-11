@@ -1,0 +1,3284 @@
+{
+  "generated_at": "2026-02-10T21:38:29.833301",
+  "profile": {
+    "name": "Miguel Gutierrez",
+    "school": "SMU",
+    "gpa": "3.8",
+    "majors": [
+      "Finance",
+      "Computer Science"
+    ],
+    "year": "Sophomore",
+    "location": "Dallas, TX"
+  },
+  "summary": {
+    "total_companies": 73,
+    "priority_1": 21,
+    "priority_2": 35,
+    "priority_3": 17,
+    "urgent_deadlines": 0,
+    "warning_deadlines": 63,
+    "safe_deadlines": 10
+  },
+  "by_urgency": {
+    "urgent": [],
+    "warning": [
+      {
+        "name": "Meta",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "meta.com/careers"
+      },
+      {
+        "name": "Netflix",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.netflix.com"
+      },
+      {
+        "name": "Tesla",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "tesla.com/careers"
+      },
+      {
+        "name": "NVIDIA",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "AI/ML",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "nvidia.com/en-us/about-nvidia/careers"
+      },
+      {
+        "name": "Morgan Stanley",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "morganstanley.com/careers"
+      },
+      {
+        "name": "Bank of America",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bankofamerica.com/careers"
+      },
+      {
+        "name": "BlackRock",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "blackrock.com/careers"
+      },
+      {
+        "name": "Two Sigma",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twosigma.com/careers"
+      },
+      {
+        "name": "Citadel",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Trading"
+        ],
+        "deadline": "2026-03-01",
+        "url": "citadel.com/careers"
+      },
+      {
+        "name": "Jane Street",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Trading",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "janestreet.com/join-jane-street"
+      },
+      {
+        "name": "DE Shaw",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Research"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deshaw.com/careers"
+      },
+      {
+        "name": "Plaid",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "plaid.com/careers"
+      },
+      {
+        "name": "Brex",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "brex.com/careers"
+      },
+      {
+        "name": "Robinhood",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.robinhood.com"
+      },
+      {
+        "name": "Coinbase",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Blockchain"
+        ],
+        "deadline": "2026-03-01",
+        "url": "coinbase.com/careers"
+      },
+      {
+        "name": "Adobe",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "adobe.com/careers"
+      },
+      {
+        "name": "Salesforce",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "salesforce.com/company/careers"
+      },
+      {
+        "name": "Uber",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "uber.com/careers"
+      },
+      {
+        "name": "Airbnb",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.airbnb.com"
+      },
+      {
+        "name": "Shopify",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "shopify.com/careers"
+      },
+      {
+        "name": "Databricks",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "AI/ML"
+        ],
+        "deadline": "2026-03-01",
+        "url": "databricks.com/company/careers"
+      },
+      {
+        "name": "Snowflake",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.snowflake.com"
+      },
+      {
+        "name": "AT&T",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "att.jobs",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Texas Instruments",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ti.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Southwest Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "southwest.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "American Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.aa.com",
+        "location": "DFW, TX"
+      },
+      {
+        "name": "Toyota North America",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "toyota.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "McKinsey & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mckinsey.com/careers"
+      },
+      {
+        "name": "Boston Consulting Group",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bcg.com/careers"
+      },
+      {
+        "name": "Bain & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bain.com/careers"
+      },
+      {
+        "name": "Deloitte",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deloitte.com/careers"
+      },
+      {
+        "name": "Accenture",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Strategy"
+        ],
+        "deadline": "2026-03-01",
+        "url": "accenture.com/careers"
+      },
+      {
+        "name": "Lazard",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Asset Management"
+        ],
+        "deadline": "2026-03-01",
+        "url": "lazard.com/careers"
+      },
+      {
+        "name": "Evercore",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "evercore.com/careers"
+      },
+      {
+        "name": "Centerview Partners",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "centerviewpartners.com"
+      },
+      {
+        "name": "Fidelity",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Tech",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fidelity.com/careers"
+      },
+      {
+        "name": "Vanguard",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Finance",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "vanguard.com/careers"
+      },
+      {
+        "name": "Point72",
+        "priority": 2,
+        "roles": [
+          "Research",
+          "Quant",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "point72.com/careers"
+      },
+      {
+        "name": "IBM",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ibm.com/careers"
+      },
+      {
+        "name": "Oracle",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "oracle.com/careers"
+      },
+      {
+        "name": "Intel",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "intel.com/careers"
+      },
+      {
+        "name": "Cisco",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Network",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cisco.com/careers"
+      },
+      {
+        "name": "PayPal",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "paypal.com/careers"
+      },
+      {
+        "name": "Twitter/X",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "x.com/careers"
+      },
+      {
+        "name": "Snap",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "snap.com/careers"
+      },
+      {
+        "name": "Pinterest",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "pinterestcareers.com"
+      },
+      {
+        "name": "Zoom",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "zoom.us/careers"
+      },
+      {
+        "name": "Twilio",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Comms"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twilio.com/careers"
+      },
+      {
+        "name": "Atlassian",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "atlassian.com/careers"
+      },
+      {
+        "name": "MongoDB",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Database",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mongodb.com/careers"
+      },
+      {
+        "name": "Cloudflare",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Security",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cloudflare.com/careers"
+      },
+      {
+        "name": "Datadog",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "datadoghq.com/careers"
+      },
+      {
+        "name": "Palantir",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Defense"
+        ],
+        "deadline": "2026-03-01",
+        "url": "palantir.com/careers"
+      },
+      {
+        "name": "Walmart",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "walmart.com/careers"
+      },
+      {
+        "name": "Berkshire Hathaway",
+        "priority": 2,
+        "roles": [
+          "Finance",
+          "Investments"
+        ],
+        "deadline": "2026-03-01",
+        "url": "berkshirehathaway.com"
+      },
+      {
+        "name": "UnitedHealth Group",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Healthcare"
+        ],
+        "deadline": "2026-03-01",
+        "url": "unitedhealthgroup.com/careers"
+      },
+      {
+        "name": "ExxonMobil",
+        "priority": 2,
+        "location": "Houston, TX",
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "exxonmobil.com/careers"
+      },
+      {
+        "name": "Verizon",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Telecom"
+        ],
+        "deadline": "2026-03-01",
+        "url": "verizon.com/careers"
+      },
+      {
+        "name": "Disney",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Media"
+        ],
+        "deadline": "2026-03-01",
+        "url": "disneycareers.com"
+      },
+      {
+        "name": "Samsung",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "samsung.com/us/careers"
+      },
+      {
+        "name": "Target",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "target.com/careers"
+      },
+      {
+        "name": "FedEx",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fedex.com/careers"
+      },
+      {
+        "name": "UPS",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ups.com/careers"
+      }
+    ],
+    "safe": [
+      {
+        "name": "Google",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "STEP",
+          "Finance"
+        ],
+        "deadline": "2026-05-01",
+        "url": "careers.google.com"
+      },
+      {
+        "name": "Microsoft",
+        "priority": 1,
+        "roles": [
+          "Explore",
+          "SWE",
+          "Finance"
+        ],
+        "deadline": "2026-09-01",
+        "url": "careers.microsoft.com"
+      },
+      {
+        "name": "Apple",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.apple.com"
+      },
+      {
+        "name": "Amazon",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Finance",
+          "Data"
+        ],
+        "deadline": "2026-03-15",
+        "url": "amazon.jobs"
+      },
+      {
+        "name": "Goldman Sachs",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "goldmansachs.com/careers"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-04-01",
+        "url": "jpmorganchase.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "Citigroup",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "citi.com/careers"
+      },
+      {
+        "name": "Stripe",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "stripe.com/jobs"
+      },
+      {
+        "name": "Charles Schwab",
+        "priority": 1,
+        "roles": [
+          "Finance",
+          "Tech",
+          "Operations"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.schwab.com",
+        "location": "Westlake, TX"
+      },
+      {
+        "name": "Capital One",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-04-15",
+        "url": "capitalonecareers.com",
+        "location": "Plano, TX"
+      }
+    ],
+    "unknown": []
+  },
+  "by_priority": {
+    "priority_1": [
+      {
+        "name": "Google",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "STEP",
+          "Finance"
+        ],
+        "deadline": "2026-05-01",
+        "url": "careers.google.com"
+      },
+      {
+        "name": "Microsoft",
+        "priority": 1,
+        "roles": [
+          "Explore",
+          "SWE",
+          "Finance"
+        ],
+        "deadline": "2026-09-01",
+        "url": "careers.microsoft.com"
+      },
+      {
+        "name": "Apple",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.apple.com"
+      },
+      {
+        "name": "Meta",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "meta.com/careers"
+      },
+      {
+        "name": "Amazon",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Finance",
+          "Data"
+        ],
+        "deadline": "2026-03-15",
+        "url": "amazon.jobs"
+      },
+      {
+        "name": "Goldman Sachs",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "goldmansachs.com/careers"
+      },
+      {
+        "name": "Morgan Stanley",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "morganstanley.com/careers"
+      },
+      {
+        "name": "JPMorgan Chase",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-04-01",
+        "url": "jpmorganchase.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "Bank of America",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bankofamerica.com/careers"
+      },
+      {
+        "name": "Citigroup",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "citi.com/careers"
+      },
+      {
+        "name": "BlackRock",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "blackrock.com/careers"
+      },
+      {
+        "name": "Two Sigma",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twosigma.com/careers"
+      },
+      {
+        "name": "Citadel",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Trading"
+        ],
+        "deadline": "2026-03-01",
+        "url": "citadel.com/careers"
+      },
+      {
+        "name": "Jane Street",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Trading",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "janestreet.com/join-jane-street"
+      },
+      {
+        "name": "DE Shaw",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Research"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deshaw.com/careers"
+      },
+      {
+        "name": "Stripe",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "stripe.com/jobs"
+      },
+      {
+        "name": "Plaid",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "plaid.com/careers"
+      },
+      {
+        "name": "AT&T",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "att.jobs",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Texas Instruments",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ti.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Charles Schwab",
+        "priority": 1,
+        "roles": [
+          "Finance",
+          "Tech",
+          "Operations"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.schwab.com",
+        "location": "Westlake, TX"
+      },
+      {
+        "name": "Capital One",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-04-15",
+        "url": "capitalonecareers.com",
+        "location": "Plano, TX"
+      }
+    ],
+    "priority_2": [
+      {
+        "name": "Netflix",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.netflix.com"
+      },
+      {
+        "name": "Tesla",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "tesla.com/careers"
+      },
+      {
+        "name": "NVIDIA",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "AI/ML",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "nvidia.com/en-us/about-nvidia/careers"
+      },
+      {
+        "name": "Brex",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "brex.com/careers"
+      },
+      {
+        "name": "Robinhood",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.robinhood.com"
+      },
+      {
+        "name": "Coinbase",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Blockchain"
+        ],
+        "deadline": "2026-03-01",
+        "url": "coinbase.com/careers"
+      },
+      {
+        "name": "Adobe",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "adobe.com/careers"
+      },
+      {
+        "name": "Salesforce",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "salesforce.com/company/careers"
+      },
+      {
+        "name": "Uber",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "uber.com/careers"
+      },
+      {
+        "name": "Airbnb",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.airbnb.com"
+      },
+      {
+        "name": "Shopify",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "shopify.com/careers"
+      },
+      {
+        "name": "Databricks",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "AI/ML"
+        ],
+        "deadline": "2026-03-01",
+        "url": "databricks.com/company/careers"
+      },
+      {
+        "name": "Snowflake",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.snowflake.com"
+      },
+      {
+        "name": "Southwest Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "southwest.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "American Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.aa.com",
+        "location": "DFW, TX"
+      },
+      {
+        "name": "Toyota North America",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "toyota.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "McKinsey & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mckinsey.com/careers"
+      },
+      {
+        "name": "Boston Consulting Group",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bcg.com/careers"
+      },
+      {
+        "name": "Bain & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bain.com/careers"
+      },
+      {
+        "name": "Deloitte",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deloitte.com/careers"
+      },
+      {
+        "name": "Accenture",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Strategy"
+        ],
+        "deadline": "2026-03-01",
+        "url": "accenture.com/careers"
+      },
+      {
+        "name": "Lazard",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Asset Management"
+        ],
+        "deadline": "2026-03-01",
+        "url": "lazard.com/careers"
+      },
+      {
+        "name": "Evercore",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "evercore.com/careers"
+      },
+      {
+        "name": "Centerview Partners",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "centerviewpartners.com"
+      },
+      {
+        "name": "Fidelity",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Tech",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fidelity.com/careers"
+      },
+      {
+        "name": "Vanguard",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Finance",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "vanguard.com/careers"
+      },
+      {
+        "name": "Point72",
+        "priority": 2,
+        "roles": [
+          "Research",
+          "Quant",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "point72.com/careers"
+      },
+      {
+        "name": "PayPal",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "paypal.com/careers"
+      },
+      {
+        "name": "Walmart",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "walmart.com/careers"
+      },
+      {
+        "name": "Berkshire Hathaway",
+        "priority": 2,
+        "roles": [
+          "Finance",
+          "Investments"
+        ],
+        "deadline": "2026-03-01",
+        "url": "berkshirehathaway.com"
+      },
+      {
+        "name": "UnitedHealth Group",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Healthcare"
+        ],
+        "deadline": "2026-03-01",
+        "url": "unitedhealthgroup.com/careers"
+      },
+      {
+        "name": "ExxonMobil",
+        "priority": 2,
+        "location": "Houston, TX",
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "exxonmobil.com/careers"
+      },
+      {
+        "name": "Verizon",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Telecom"
+        ],
+        "deadline": "2026-03-01",
+        "url": "verizon.com/careers"
+      },
+      {
+        "name": "Disney",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Media"
+        ],
+        "deadline": "2026-03-01",
+        "url": "disneycareers.com"
+      },
+      {
+        "name": "Samsung",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "samsung.com/us/careers"
+      }
+    ],
+    "priority_3": [
+      {
+        "name": "IBM",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ibm.com/careers"
+      },
+      {
+        "name": "Oracle",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "oracle.com/careers"
+      },
+      {
+        "name": "Intel",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "intel.com/careers"
+      },
+      {
+        "name": "Cisco",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Network",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cisco.com/careers"
+      },
+      {
+        "name": "Twitter/X",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "x.com/careers"
+      },
+      {
+        "name": "Snap",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "snap.com/careers"
+      },
+      {
+        "name": "Pinterest",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "pinterestcareers.com"
+      },
+      {
+        "name": "Zoom",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "zoom.us/careers"
+      },
+      {
+        "name": "Twilio",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Comms"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twilio.com/careers"
+      },
+      {
+        "name": "Atlassian",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "atlassian.com/careers"
+      },
+      {
+        "name": "MongoDB",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Database",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mongodb.com/careers"
+      },
+      {
+        "name": "Cloudflare",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Security",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cloudflare.com/careers"
+      },
+      {
+        "name": "Datadog",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "datadoghq.com/careers"
+      },
+      {
+        "name": "Palantir",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Defense"
+        ],
+        "deadline": "2026-03-01",
+        "url": "palantir.com/careers"
+      },
+      {
+        "name": "Target",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "target.com/careers"
+      },
+      {
+        "name": "FedEx",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fedex.com/careers"
+      },
+      {
+        "name": "UPS",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ups.com/careers"
+      }
+    ]
+  },
+  "by_location": {
+    "dallas_tx": [
+      {
+        "name": "JPMorgan Chase",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-04-01",
+        "url": "jpmorganchase.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "AT&T",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "att.jobs",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Texas Instruments",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ti.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "Charles Schwab",
+        "priority": 1,
+        "roles": [
+          "Finance",
+          "Tech",
+          "Operations"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.schwab.com",
+        "location": "Westlake, TX"
+      },
+      {
+        "name": "Capital One",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-04-15",
+        "url": "capitalonecareers.com",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "Southwest Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "southwest.com/careers",
+        "location": "Dallas, TX"
+      },
+      {
+        "name": "American Airlines",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.aa.com",
+        "location": "DFW, TX"
+      },
+      {
+        "name": "Toyota North America",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "toyota.com/careers",
+        "location": "Plano, TX"
+      },
+      {
+        "name": "ExxonMobil",
+        "priority": 2,
+        "location": "Houston, TX",
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "exxonmobil.com/careers"
+      }
+    ],
+    "remote": [],
+    "other": [
+      {
+        "name": "Google",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "STEP",
+          "Finance"
+        ],
+        "deadline": "2026-05-01",
+        "url": "careers.google.com"
+      },
+      {
+        "name": "Microsoft",
+        "priority": 1,
+        "roles": [
+          "Explore",
+          "SWE",
+          "Finance"
+        ],
+        "deadline": "2026-09-01",
+        "url": "careers.microsoft.com"
+      },
+      {
+        "name": "Apple",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "jobs.apple.com"
+      },
+      {
+        "name": "Meta",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "meta.com/careers"
+      },
+      {
+        "name": "Amazon",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Finance",
+          "Data"
+        ],
+        "deadline": "2026-03-15",
+        "url": "amazon.jobs"
+      },
+      {
+        "name": "Netflix",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "jobs.netflix.com"
+      },
+      {
+        "name": "Tesla",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "tesla.com/careers"
+      },
+      {
+        "name": "NVIDIA",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "AI/ML",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "nvidia.com/en-us/about-nvidia/careers"
+      },
+      {
+        "name": "Goldman Sachs",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "goldmansachs.com/careers"
+      },
+      {
+        "name": "Morgan Stanley",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "morganstanley.com/careers"
+      },
+      {
+        "name": "Bank of America",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bankofamerica.com/careers"
+      },
+      {
+        "name": "Citigroup",
+        "priority": 1,
+        "roles": [
+          "IB",
+          "Tech",
+          "Quant"
+        ],
+        "deadline": "2026-03-15",
+        "url": "citi.com/careers"
+      },
+      {
+        "name": "BlackRock",
+        "priority": 1,
+        "roles": [
+          "Tech",
+          "Data",
+          "Quant"
+        ],
+        "deadline": "2026-03-01",
+        "url": "blackrock.com/careers"
+      },
+      {
+        "name": "Two Sigma",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twosigma.com/careers"
+      },
+      {
+        "name": "Citadel",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Trading"
+        ],
+        "deadline": "2026-03-01",
+        "url": "citadel.com/careers"
+      },
+      {
+        "name": "Jane Street",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Trading",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "janestreet.com/join-jane-street"
+      },
+      {
+        "name": "DE Shaw",
+        "priority": 1,
+        "roles": [
+          "Quant",
+          "Tech",
+          "Research"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deshaw.com/careers"
+      },
+      {
+        "name": "Stripe",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-15",
+        "url": "stripe.com/jobs"
+      },
+      {
+        "name": "Plaid",
+        "priority": 1,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "plaid.com/careers"
+      },
+      {
+        "name": "Brex",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "brex.com/careers"
+      },
+      {
+        "name": "Robinhood",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.robinhood.com"
+      },
+      {
+        "name": "Coinbase",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Blockchain"
+        ],
+        "deadline": "2026-03-01",
+        "url": "coinbase.com/careers"
+      },
+      {
+        "name": "Adobe",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "adobe.com/careers"
+      },
+      {
+        "name": "Salesforce",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "salesforce.com/company/careers"
+      },
+      {
+        "name": "Uber",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "uber.com/careers"
+      },
+      {
+        "name": "Airbnb",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.airbnb.com"
+      },
+      {
+        "name": "Shopify",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "shopify.com/careers"
+      },
+      {
+        "name": "Databricks",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "AI/ML"
+        ],
+        "deadline": "2026-03-01",
+        "url": "databricks.com/company/careers"
+      },
+      {
+        "name": "Snowflake",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "careers.snowflake.com"
+      },
+      {
+        "name": "McKinsey & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mckinsey.com/careers"
+      },
+      {
+        "name": "Boston Consulting Group",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bcg.com/careers"
+      },
+      {
+        "name": "Bain & Company",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Analytics",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "bain.com/careers"
+      },
+      {
+        "name": "Deloitte",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "deloitte.com/careers"
+      },
+      {
+        "name": "Accenture",
+        "priority": 2,
+        "roles": [
+          "Consulting",
+          "Tech",
+          "Strategy"
+        ],
+        "deadline": "2026-03-01",
+        "url": "accenture.com/careers"
+      },
+      {
+        "name": "Lazard",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Asset Management"
+        ],
+        "deadline": "2026-03-01",
+        "url": "lazard.com/careers"
+      },
+      {
+        "name": "Evercore",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "evercore.com/careers"
+      },
+      {
+        "name": "Centerview Partners",
+        "priority": 2,
+        "roles": [
+          "IB",
+          "Advisory"
+        ],
+        "deadline": "2026-03-01",
+        "url": "centerviewpartners.com"
+      },
+      {
+        "name": "Fidelity",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Tech",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fidelity.com/careers"
+      },
+      {
+        "name": "Vanguard",
+        "priority": 2,
+        "roles": [
+          "Investments",
+          "Finance",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "vanguard.com/careers"
+      },
+      {
+        "name": "Point72",
+        "priority": 2,
+        "roles": [
+          "Research",
+          "Quant",
+          "Tech"
+        ],
+        "deadline": "2026-03-01",
+        "url": "point72.com/careers"
+      },
+      {
+        "name": "IBM",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ibm.com/careers"
+      },
+      {
+        "name": "Oracle",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "oracle.com/careers"
+      },
+      {
+        "name": "Intel",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "intel.com/careers"
+      },
+      {
+        "name": "Cisco",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Network",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cisco.com/careers"
+      },
+      {
+        "name": "PayPal",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "paypal.com/careers"
+      },
+      {
+        "name": "Twitter/X",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "x.com/careers"
+      },
+      {
+        "name": "Snap",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "snap.com/careers"
+      },
+      {
+        "name": "Pinterest",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Product"
+        ],
+        "deadline": "2026-03-01",
+        "url": "pinterestcareers.com"
+      },
+      {
+        "name": "Zoom",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "zoom.us/careers"
+      },
+      {
+        "name": "Twilio",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Cloud",
+          "Comms"
+        ],
+        "deadline": "2026-03-01",
+        "url": "twilio.com/careers"
+      },
+      {
+        "name": "Atlassian",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Product",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "atlassian.com/careers"
+      },
+      {
+        "name": "MongoDB",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Database",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "mongodb.com/careers"
+      },
+      {
+        "name": "Cloudflare",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Security",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "cloudflare.com/careers"
+      },
+      {
+        "name": "Datadog",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Cloud"
+        ],
+        "deadline": "2026-03-01",
+        "url": "datadoghq.com/careers"
+      },
+      {
+        "name": "Palantir",
+        "priority": 3,
+        "roles": [
+          "SWE",
+          "Data",
+          "Defense"
+        ],
+        "deadline": "2026-03-01",
+        "url": "palantir.com/careers"
+      },
+      {
+        "name": "Walmart",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "walmart.com/careers"
+      },
+      {
+        "name": "Berkshire Hathaway",
+        "priority": 2,
+        "roles": [
+          "Finance",
+          "Investments"
+        ],
+        "deadline": "2026-03-01",
+        "url": "berkshirehathaway.com"
+      },
+      {
+        "name": "UnitedHealth Group",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Healthcare"
+        ],
+        "deadline": "2026-03-01",
+        "url": "unitedhealthgroup.com/careers"
+      },
+      {
+        "name": "Verizon",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Telecom"
+        ],
+        "deadline": "2026-03-01",
+        "url": "verizon.com/careers"
+      },
+      {
+        "name": "Disney",
+        "priority": 2,
+        "roles": [
+          "Tech",
+          "Data",
+          "Media"
+        ],
+        "deadline": "2026-03-01",
+        "url": "disneycareers.com"
+      },
+      {
+        "name": "Samsung",
+        "priority": 2,
+        "roles": [
+          "SWE",
+          "Hardware",
+          "Data"
+        ],
+        "deadline": "2026-03-01",
+        "url": "samsung.com/us/careers"
+      },
+      {
+        "name": "Target",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Finance"
+        ],
+        "deadline": "2026-03-01",
+        "url": "target.com/careers"
+      },
+      {
+        "name": "FedEx",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "fedex.com/careers"
+      },
+      {
+        "name": "UPS",
+        "priority": 3,
+        "roles": [
+          "Tech",
+          "Data",
+          "Logistics"
+        ],
+        "deadline": "2026-03-01",
+        "url": "ups.com/careers"
+      }
+    ]
+  },
+  "all_companies": [
+    {
+      "name": "Google",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "STEP",
+        "Finance"
+      ],
+      "deadline": "2026-05-01",
+      "url": "careers.google.com"
+    },
+    {
+      "name": "Microsoft",
+      "priority": 1,
+      "roles": [
+        "Explore",
+        "SWE",
+        "Finance"
+      ],
+      "deadline": "2026-09-01",
+      "url": "careers.microsoft.com"
+    },
+    {
+      "name": "Apple",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Product",
+        "Finance"
+      ],
+      "deadline": "2026-03-15",
+      "url": "jobs.apple.com"
+    },
+    {
+      "name": "Meta",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Product",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "meta.com/careers"
+    },
+    {
+      "name": "Amazon",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Finance",
+        "Data"
+      ],
+      "deadline": "2026-03-15",
+      "url": "amazon.jobs"
+    },
+    {
+      "name": "Netflix",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "jobs.netflix.com"
+    },
+    {
+      "name": "Tesla",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "tesla.com/careers"
+    },
+    {
+      "name": "NVIDIA",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "AI/ML",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "nvidia.com/en-us/about-nvidia/careers"
+    },
+    {
+      "name": "Goldman Sachs",
+      "priority": 1,
+      "roles": [
+        "IB",
+        "Tech",
+        "Quant"
+      ],
+      "deadline": "2026-03-15",
+      "url": "goldmansachs.com/careers"
+    },
+    {
+      "name": "Morgan Stanley",
+      "priority": 1,
+      "roles": [
+        "IB",
+        "Tech",
+        "Quant"
+      ],
+      "deadline": "2026-03-01",
+      "url": "morganstanley.com/careers"
+    },
+    {
+      "name": "JPMorgan Chase",
+      "priority": 1,
+      "roles": [
+        "IB",
+        "Tech",
+        "Quant"
+      ],
+      "deadline": "2026-04-01",
+      "url": "jpmorganchase.com/careers",
+      "location": "Plano, TX"
+    },
+    {
+      "name": "Bank of America",
+      "priority": 1,
+      "roles": [
+        "IB",
+        "Tech",
+        "Quant"
+      ],
+      "deadline": "2026-03-01",
+      "url": "bankofamerica.com/careers"
+    },
+    {
+      "name": "Citigroup",
+      "priority": 1,
+      "roles": [
+        "IB",
+        "Tech",
+        "Quant"
+      ],
+      "deadline": "2026-03-15",
+      "url": "citi.com/careers"
+    },
+    {
+      "name": "BlackRock",
+      "priority": 1,
+      "roles": [
+        "Tech",
+        "Data",
+        "Quant"
+      ],
+      "deadline": "2026-03-01",
+      "url": "blackrock.com/careers"
+    },
+    {
+      "name": "Two Sigma",
+      "priority": 1,
+      "roles": [
+        "Quant",
+        "Tech",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "twosigma.com/careers"
+    },
+    {
+      "name": "Citadel",
+      "priority": 1,
+      "roles": [
+        "Quant",
+        "Tech",
+        "Trading"
+      ],
+      "deadline": "2026-03-01",
+      "url": "citadel.com/careers"
+    },
+    {
+      "name": "Jane Street",
+      "priority": 1,
+      "roles": [
+        "Quant",
+        "Trading",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "janestreet.com/join-jane-street"
+    },
+    {
+      "name": "DE Shaw",
+      "priority": 1,
+      "roles": [
+        "Quant",
+        "Tech",
+        "Research"
+      ],
+      "deadline": "2026-03-01",
+      "url": "deshaw.com/careers"
+    },
+    {
+      "name": "Stripe",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-15",
+      "url": "stripe.com/jobs"
+    },
+    {
+      "name": "Plaid",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "plaid.com/careers"
+    },
+    {
+      "name": "Brex",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "brex.com/careers"
+    },
+    {
+      "name": "Robinhood",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "careers.robinhood.com"
+    },
+    {
+      "name": "Coinbase",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Blockchain"
+      ],
+      "deadline": "2026-03-01",
+      "url": "coinbase.com/careers"
+    },
+    {
+      "name": "Adobe",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Product",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "adobe.com/careers"
+    },
+    {
+      "name": "Salesforce",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Product",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "salesforce.com/company/careers"
+    },
+    {
+      "name": "Uber",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "uber.com/careers"
+    },
+    {
+      "name": "Airbnb",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Product",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "careers.airbnb.com"
+    },
+    {
+      "name": "Shopify",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "shopify.com/careers"
+    },
+    {
+      "name": "Databricks",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "AI/ML"
+      ],
+      "deadline": "2026-03-01",
+      "url": "databricks.com/company/careers"
+    },
+    {
+      "name": "Snowflake",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Cloud"
+      ],
+      "deadline": "2026-03-01",
+      "url": "careers.snowflake.com"
+    },
+    {
+      "name": "AT&T",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance",
+        "Product"
+      ],
+      "deadline": "2026-03-01",
+      "url": "att.jobs",
+      "location": "Dallas, TX"
+    },
+    {
+      "name": "Texas Instruments",
+      "priority": 1,
+      "roles": [
+        "SWE",
+        "Hardware",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "ti.com/careers",
+      "location": "Dallas, TX"
+    },
+    {
+      "name": "Charles Schwab",
+      "priority": 1,
+      "roles": [
+        "Finance",
+        "Tech",
+        "Operations"
+      ],
+      "deadline": "2026-03-15",
+      "url": "jobs.schwab.com",
+      "location": "Westlake, TX"
+    },
+    {
+      "name": "Capital One",
+      "priority": 1,
+      "roles": [
+        "Tech",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-04-15",
+      "url": "capitalonecareers.com",
+      "location": "Plano, TX"
+    },
+    {
+      "name": "Southwest Airlines",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "southwest.com/careers",
+      "location": "Dallas, TX"
+    },
+    {
+      "name": "American Airlines",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "jobs.aa.com",
+      "location": "DFW, TX"
+    },
+    {
+      "name": "Toyota North America",
+      "priority": 2,
+      "roles": [
+        "Tech",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "toyota.com/careers",
+      "location": "Plano, TX"
+    },
+    {
+      "name": "McKinsey & Company",
+      "priority": 2,
+      "roles": [
+        "Consulting",
+        "Analytics",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "mckinsey.com/careers"
+    },
+    {
+      "name": "Boston Consulting Group",
+      "priority": 2,
+      "roles": [
+        "Consulting",
+        "Analytics",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "bcg.com/careers"
+    },
+    {
+      "name": "Bain & Company",
+      "priority": 2,
+      "roles": [
+        "Consulting",
+        "Analytics",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "bain.com/careers"
+    },
+    {
+      "name": "Deloitte",
+      "priority": 2,
+      "roles": [
+        "Consulting",
+        "Tech",
+        "Advisory"
+      ],
+      "deadline": "2026-03-01",
+      "url": "deloitte.com/careers"
+    },
+    {
+      "name": "Accenture",
+      "priority": 2,
+      "roles": [
+        "Consulting",
+        "Tech",
+        "Strategy"
+      ],
+      "deadline": "2026-03-01",
+      "url": "accenture.com/careers"
+    },
+    {
+      "name": "Lazard",
+      "priority": 2,
+      "roles": [
+        "IB",
+        "Asset Management"
+      ],
+      "deadline": "2026-03-01",
+      "url": "lazard.com/careers"
+    },
+    {
+      "name": "Evercore",
+      "priority": 2,
+      "roles": [
+        "IB",
+        "Advisory"
+      ],
+      "deadline": "2026-03-01",
+      "url": "evercore.com/careers"
+    },
+    {
+      "name": "Centerview Partners",
+      "priority": 2,
+      "roles": [
+        "IB",
+        "Advisory"
+      ],
+      "deadline": "2026-03-01",
+      "url": "centerviewpartners.com"
+    },
+    {
+      "name": "Fidelity",
+      "priority": 2,
+      "roles": [
+        "Investments",
+        "Tech",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "fidelity.com/careers"
+    },
+    {
+      "name": "Vanguard",
+      "priority": 2,
+      "roles": [
+        "Investments",
+        "Finance",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "vanguard.com/careers"
+    },
+    {
+      "name": "Point72",
+      "priority": 2,
+      "roles": [
+        "Research",
+        "Quant",
+        "Tech"
+      ],
+      "deadline": "2026-03-01",
+      "url": "point72.com/careers"
+    },
+    {
+      "name": "IBM",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Cloud",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "ibm.com/careers"
+    },
+    {
+      "name": "Oracle",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Cloud",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "oracle.com/careers"
+    },
+    {
+      "name": "Intel",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Hardware",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "intel.com/careers"
+    },
+    {
+      "name": "Cisco",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Network",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "cisco.com/careers"
+    },
+    {
+      "name": "PayPal",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "paypal.com/careers"
+    },
+    {
+      "name": "Twitter/X",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Data",
+        "Product"
+      ],
+      "deadline": "2026-03-01",
+      "url": "x.com/careers"
+    },
+    {
+      "name": "Snap",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Product",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "snap.com/careers"
+    },
+    {
+      "name": "Pinterest",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Data",
+        "Product"
+      ],
+      "deadline": "2026-03-01",
+      "url": "pinterestcareers.com"
+    },
+    {
+      "name": "Zoom",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Product",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "zoom.us/careers"
+    },
+    {
+      "name": "Twilio",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Cloud",
+        "Comms"
+      ],
+      "deadline": "2026-03-01",
+      "url": "twilio.com/careers"
+    },
+    {
+      "name": "Atlassian",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Product",
+        "Cloud"
+      ],
+      "deadline": "2026-03-01",
+      "url": "atlassian.com/careers"
+    },
+    {
+      "name": "MongoDB",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Database",
+        "Cloud"
+      ],
+      "deadline": "2026-03-01",
+      "url": "mongodb.com/careers"
+    },
+    {
+      "name": "Cloudflare",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Security",
+        "Cloud"
+      ],
+      "deadline": "2026-03-01",
+      "url": "cloudflare.com/careers"
+    },
+    {
+      "name": "Datadog",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Data",
+        "Cloud"
+      ],
+      "deadline": "2026-03-01",
+      "url": "datadoghq.com/careers"
+    },
+    {
+      "name": "Palantir",
+      "priority": 3,
+      "roles": [
+        "SWE",
+        "Data",
+        "Defense"
+      ],
+      "deadline": "2026-03-01",
+      "url": "palantir.com/careers"
+    },
+    {
+      "name": "Walmart",
+      "priority": 2,
+      "roles": [
+        "Tech",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "walmart.com/careers"
+    },
+    {
+      "name": "Berkshire Hathaway",
+      "priority": 2,
+      "roles": [
+        "Finance",
+        "Investments"
+      ],
+      "deadline": "2026-03-01",
+      "url": "berkshirehathaway.com"
+    },
+    {
+      "name": "UnitedHealth Group",
+      "priority": 2,
+      "roles": [
+        "Tech",
+        "Data",
+        "Healthcare"
+      ],
+      "deadline": "2026-03-01",
+      "url": "unitedhealthgroup.com/careers"
+    },
+    {
+      "name": "ExxonMobil",
+      "priority": 2,
+      "location": "Houston, TX",
+      "roles": [
+        "Tech",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "exxonmobil.com/careers"
+    },
+    {
+      "name": "Verizon",
+      "priority": 2,
+      "roles": [
+        "Tech",
+        "Data",
+        "Telecom"
+      ],
+      "deadline": "2026-03-01",
+      "url": "verizon.com/careers"
+    },
+    {
+      "name": "Disney",
+      "priority": 2,
+      "roles": [
+        "Tech",
+        "Data",
+        "Media"
+      ],
+      "deadline": "2026-03-01",
+      "url": "disneycareers.com"
+    },
+    {
+      "name": "Samsung",
+      "priority": 2,
+      "roles": [
+        "SWE",
+        "Hardware",
+        "Data"
+      ],
+      "deadline": "2026-03-01",
+      "url": "samsung.com/us/careers"
+    },
+    {
+      "name": "Target",
+      "priority": 3,
+      "roles": [
+        "Tech",
+        "Data",
+        "Finance"
+      ],
+      "deadline": "2026-03-01",
+      "url": "target.com/careers"
+    },
+    {
+      "name": "FedEx",
+      "priority": 3,
+      "roles": [
+        "Tech",
+        "Data",
+        "Logistics"
+      ],
+      "deadline": "2026-03-01",
+      "url": "fedex.com/careers"
+    },
+    {
+      "name": "UPS",
+      "priority": 3,
+      "roles": [
+        "Tech",
+        "Data",
+        "Logistics"
+      ],
+      "deadline": "2026-03-01",
+      "url": "ups.com/careers"
+    }
+  ]
+}
