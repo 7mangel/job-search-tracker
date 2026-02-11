@@ -1,25 +1,41 @@
-# 🎯 Job Search Tracker
+# 🎯 Job Search Tracker - 7mangel
 
-Automated job application system for 7mangel
+**Target:** Finance & CS Internships | Big Tech or Dallas-Based
+**Status:** Active Search
 
-## 📊 Dashboard
+## 📊 Live Dashboard
 
-| Company | Position | Status | Applied | Follow-up |
-|---------|----------|--------|---------|-----------|
-| TBD | TBD | Ready to apply | - | - |
+| Company | Position | Location | Status | Applied | Resume Version |
+|---------|----------|----------|--------|---------|----------------|
+| [TBD] | [TBD] | [TBD] | 🔍 Searching | - | - |
 
-## 📁 Structure
-- `/applications/` - Individual job applications
-- `/templates/` - Resume, cover letter templates  
-- `/logs/` - Application activity logs
-- `/leads/` - Potential job opportunities found
+## 📁 Repository Structure
 
-## 🤖 Automation Status
+```
+├── applications/          # Individual job applications
+│   ├── draft/            # Applications in progress
+│   ├── submitted/        # Completed applications
+│   └── templates/        # Resume/cover letter templates
+├── leads/                # Job opportunities found
+├── research/             # Company research notes
+└── logs/                 # Daily activity logs
+```
+
+## 🎯 Target Criteria
+- **Role:** Finance & Computer Science internships
+- **Level:** Entry-level / Internship
+- **Location:** 
+  - 🏢 Big Tech (remote or any location)
+  - 🌆 Dallas, TX area (local)
+- **Industries:** Tech, Finance, Consulting, Startups
+
+## 🔄 Automation Status
 - [x] GitHub repo created
-- [ ] Gmail connected
-- [ ] Resume uploaded
+- [x] Gmail connected
+- [ ] Resume received
+- [ ] Project board active
 - [ ] Job search started
-- [ ] Auto-apply enabled
+- [ ] Auto-apply system ready
 
 ---
-Last updated: $(date)
+Last Updated: $(date)
